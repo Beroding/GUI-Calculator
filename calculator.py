@@ -1,4 +1,6 @@
 import tkinter as tk
+import tkinter.messagebox
+from tkinter.constants import SUNKEN
 
 
 tab = tk.Tk()
@@ -14,7 +16,13 @@ def click(num):
 def clear():
     entry.delete(0, tk.END)
 
-# def equal():
+def equal():
+    try:
+        y = str(eval(entry.get()))
+        entry.delete(0, tk.END)
+        entry.insert(0, y)
+    except:
+        tkinter.messagebox.showinfo("Error", "Syntax Error")
 
 
 btn_1 = tk.Button(master=frame, text=1, padx=30, pady=10, width=3, command=lambda: click(1))
@@ -48,18 +56,21 @@ btn_0 = tk.Button(master=frame, text=0, padx=30, pady=10, width=3, command=lambd
 btn_0.grid(row=4, column=1, pady=2)
 
 btn_plus = tk.Button(master=frame, text='+', padx=30, pady=10, width=3, command=lambda: click('+'))
-btn_plus.grid(row=5, column=0, pady=2)
+btn_plus.grid(row=4, column=2, pady=3)
 
 btn_minus = tk.Button(master=frame, text='-', padx=30, pady=10, width=3, command=lambda: click('-'))
-btn_plus.grid(row=5, column=1, pady=2)
+btn_minus.grid(row=4, column=0, pady=2)
 
 btn_times = tk.Button(master=frame, text='*', padx=30, pady=10, width=3, command=lambda: click('*'))
-btn_times.grid(row=5, column=2, pady=2)
+btn_times.grid(row=5, column=1, pady=2)
 
 btn_delete = tk.Button(master=frame, text='<', padx=30, pady=10, width=3, command=lambda: entry.delete(len(entry.get()) - 1))
-btn_delete.grid(row=4, column=2, pady=3)
+btn_delete.grid(row=5, column=2, pady=2)
 
-btn_equal = tk.Button(master=frame, text='=', padx=30, pady=10, width=3, command=eval)
-btn_equal.grid(row=6, column=2, pady=5)
+btn_equal = tk.Button(master=frame, text='=', padx=30, pady=10, width=3, command=equal)
+btn_equal.grid(row=5, column=0, pady=5)
+
+button_clear = tk.Button(master=frame, text="clear", padx=15, pady=5, width=12, command=clear)
+button_clear.grid(row=6, column=0, columnspan=3, pady=2)
 
 tab.mainloop()

@@ -11,10 +11,15 @@ Copy code
 python calculator.py
 ## Features
 Addition (+)
+
 Subtraction (-)
+
 Multiplication (*)
+
 Division (/)
+
 Clear button to reset the input
+
 Backspace button to delete the last digit
 Error handling for syntax errors during evaluation
 ## Dependencies

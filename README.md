@@ -1,15 +1,15 @@
 # GUI-Calculator
 
-Calculator Project
+## Calculator Project
 This is a simple calculator project implemented using the Tkinter library in Python. The calculator provides basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
-Usage
+## Usage
 Clone the repository or download the script.
 Run the script using a Python interpreter.
 bash
 Copy code
 python calculator.py
-Features
+## Features
 Addition (+)
 Subtraction (-)
 Multiplication (*)
@@ -17,10 +17,10 @@ Division (/)
 Clear button to reset the input
 Backspace button to delete the last digit
 Error handling for syntax errors during evaluation
-Dependencies
+## Dependencies
 Python 3.x
 Tkinter library (usually included with Python installations)
-How to Use
+## How to Use
 Enter numerical values using the number buttons.
 Use the operation buttons to perform calculations.
 Press the "=" button to see the result.
